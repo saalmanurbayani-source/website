@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duta Elektronik - Spesialis Service & Perbaikan Elektronik Profesional</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .slide-track {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+    /* Efek latar belakang bercahaya halus (glow) */
+    .bg-glow-radial {
+      background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
+    }
+    .bg-dark-glow {
+      background: radial-gradient(circle at 50% 0%, rgba(30, 58, 138, 0.25) 0%, rgba(3, 7, 18, 1) 70%);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- ==================== 1. HEADER / NAVBAR ==================== -->
+  <header class="bg-slate-900/95 backdrop-blur-md text-white shadow-sm sticky top-0 z-50 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <div class="bg-blue-600 text-white font-black px-3 py-1.5 rounded-lg text-sm tracking-wider shadow-md shadow-blue-500/20">DE</div>
+        <div>
+          <h1 class="text-lg font-bold tracking-wider text-white">DUTA ELEKTRONIK</h1>
+          <p class="text-[11px] text-slate-400">Est. 2010 - Service Elektronik & Pendingin Profesional</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+        <a href="#beranda" class="hover:text-blue-400 transition">Beranda</a>
+        <a href="#tentang" class="hover:text-blue-400 transition">Tentang Kami</a>
+        <a href="#layanan" class="hover:text-blue-400 transition">Layanan</a>
+        <a href="#tarif" class="hover:text-blue-400 transition">Tarif</a>
+        <a href="#portofolio" class="hover:text-blue-400 transition">Portofolio</a>
+        <a href="#kontak" class="hover:text-blue-400 transition">Kontak</a>
+      </nav>
+      <div>
+        <a href="https://wa.me/628562595708?text=Halo%20Duta%20Elektronik,%20saya%20ingin%20konsultasi%20perbaikan." target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white text-xs md:text-sm font-semibold px-4 py-2.5 rounded-xl shadow-lg shadow-blue-600/20 transition">
+          Hubungi Teknisi
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== 2. HERO SECTION ==================== -->
+  <section id="beranda" class="bg-dark-glow text-white py-24 px-4 text-center relative overflow-hidden border-b border-slate-800">
+    <!-- Elemen Dekoratif Cahaya Latar -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto relative z-10">
+      <span class="text-xs font-semibold text-blue-400 bg-blue-950/80 border border-blue-800/50 px-3.5 py-1.5 rounded-full uppercase tracking-wider mb-6 inline-block shadow-inner">
+        Spesialis Service Elektronik & Pendingin Rumah Tangga & Komersial
+      </span>
+      <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight tracking-tight">Solusi Profesional Perbaikan Elektronik & Peralatan Rumah Tangga</h2>
+      <p class="text-slate-300 text-base md:text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
+        Berpengalaman sejak 2010 menangani perbaikan tingkat komponen (<span class="italic text-blue-300">component-level repair</span>) untuk segala jenis perangkat—mulai dari TV LED, mesin cuci, kulkas, AC, hingga perangkat komersial di Yogyakarta.
+      </p>
+      <div class="flex justify-center gap-4 flex-wrap">
+        <a href="#portofolio" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg shadow-blue-600/30 transition transform hover:-translate-y-0.5">
+          Lihat Portofolio & Slider
+        </a>
+        <a href="https://wa.me/628562595708?text=Halo%20Duta%20Elektronik,%20saya%20ingin%20konsultasi%20perbaikan." target="_blank" class="bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
+          Konsultasi WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. TENTANG KAMI ==================== -->
+  <section id="tentang" class="max-w-7xl mx-auto px-4 py-24 bg-glow-radial border-b border-slate-200/60">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full uppercase tracking-wider">Pengalaman & Dedikasi</span>
+        <h3 class="text-3xl font-extrabold text-slate-900 mt-4 mb-6 leading-snug">
+          Lebih dari <span class="text-blue-600">16 Tahun</span> Menjadi Kepercayaan di Bidang Elektronik Presisi
+        </h3>
+        <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-4">
+          Didirikan sejak tahun <strong class="text-slate-900">2010</strong>, <strong class="text-slate-900">Duta Elektronik</strong> telah tumbuh menjadi pusat reparasi dan diagnostik elektronik terpercaya di Yogyakarta. Kami berfokus pada penanganan sirkuit tingkat komponen (<span class="italic">component-level repair</span>) dengan tingkat ketelitian tinggi.
+        </p>
+        <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+          Dengan pengalaman panjang di lapangan, kami telah menyelesaikan ribuan kasus kerusakan mulai dari pendingin, mesin cuci, televisi, hingga peralatan rumah tangga dan komersial lainnya.
+        </p>
+      </div>
+      <div class="bg-white/80 backdrop-blur-md border border-slate-200/80 p-8 rounded-3xl shadow-xl shadow-slate-200/50">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="bg-slate-50/80 border border-slate-100 p-6 rounded-2xl text-center shadow-sm">
+            <h4 class="text-3xl font-black text-blue-600 mb-1">16+</h4>
+            <p class="text-xs font-semibold text-slate-800 uppercase tracking-wider mb-1">Tahun Pengalaman</p>
+            <span class="text-[11px] text-slate-500">Konsistensi sejak 2010</span>
+          </div>
+          <div class="bg-slate-50/80 border border-slate-100 p-6 rounded-2xl text-center shadow-sm">
+            <h4 class="text-3xl font-black text-blue-600 mb-1">15.000+</h4>
+            <p class="text-xs font-semibold text-slate-800 uppercase tracking-wider mb-1">Unit Selesai</p>
+            <span class="text-[11px] text-slate-500">Rumah tangga & komersial</span>
+          </div>
+          <div class="bg-slate-50/80 border border-slate-100 p-6 rounded-2xl text-center shadow-sm">
+            <h4 class="text-3xl font-black text-emerald-600 mb-1">98%</h4>
+            <p class="text-xs font-semibold text-slate-800 uppercase tracking-wider mb-1">Tingkat Berhasil</p>
+            <span class="text-[11px] text-slate-500">Diagnostik terukur</span>
+          </div>
+          <div class="bg-slate-50/80 border border-slate-100 p-6 rounded-2xl text-center shadow-sm">
+            <h4 class="text-3xl font-black text-blue-600 mb-1">100%</h4>
+            <p class="text-xs font-semibold text-slate-800 uppercase tracking-wider mb-1">Garansi Resmi</p>
+            <span class="text-[11px] text-slate-500">Dukungan Purna Jual</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. LAYANAN KOMPREHENSIF ==================== -->
+  <section id="layanan" class="bg-slate-950 text-white py-24 px-4 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/10 via-slate-950 to-slate-950 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center mb-16">
+        <span class="text-xs font-semibold text-blue-400 bg-blue-900/40 border border-blue-700/50 px-3.5 py-1.5 rounded-full uppercase tracking-wider">Layanan Komprehensif</span>
+        <h3 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-3">Layanan Perbaikan & Service</h3>
+        <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">Pilih layanan perbaikan perangkat rumah tangga dan elektronik Anda bersama teknisi berpengalaman.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- CARD 1 -->
+        <div class="bg-slate-900/80 backdrop-blur-sm border border-slate-800/80 rounded-3xl p-8 flex flex-col justify-between shadow-xl hover:border-blue-500/40 transition duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-950 border border-blue-800/60 flex items-center justify-center text-xl mb-6 shadow-inner">🏠</div>
+            <h4 class="text-xl font-bold text-white mb-2">Layanan Panggilan</h4>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed">Teknisi berpengalaman siap datang langsung ke rumah atau lokasi Anda di Jogja.</p>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li class="flex items-center space-x-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span><span>Service Kulkas / Freezer Panggilan</span></li>
+              <li class="flex items-center space-x-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span><span>Service Mesin Cuci Panggilan</span></li>
+              <li class="flex items-center space-x-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span><span>Service AC Rumah (Cuci & Perbaikan)</span></li>
+              <li class="flex items-center space-x-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span><span>Service Pompa Air Panggilan</span></li>
+              <li class="flex items-center space-x-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span><span>Service Kompor Gas & Induksi</span></li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-slate-800/80">
+            <a href="https://wa.me/628562595708?text=Halo%20Duta%20Elektronik,%20saya%20ingin%20memesan%20Layanan%20Panggilan." target="_blank" class="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-4 rounded-xl text-sm transition shadow-md shadow-blue-600/20">
+              Pesan Layanan Panggilan
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="bg-slate-900/80 backdrop-blur-sm border border-slate-800/80 rounded-3xl p-8 flex flex-col justify-between shadow-xl hover:border-blue-500/40 transition duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-950 border border-blue-800/60 flex items-center justify-center text-xl mb-6 shadow-inner">📺</div>
+            <h4 class="text-xl font-bold text-white mb-2">Elektronik & Display</h4>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed">Penanganan komponen mikro & perangkat hiburan rumah di workshop.</p>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li class="flex items-center space-x-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span><span>Service TV LED / Smart TV / Android TV</span></li>
+              <li class="flex items-center space-x-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span><span>Service Power Amplifier & Audio Speaker</span></li>
+              <li class="flex items-center space-x-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span><span>Perbaikan Modul PCB / Mainboard TV</span></li>
+              <li class="flex items-center space-x-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span><span>Restorasi Power Supply Unit (PSU)</span></li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-slate-800/80">
+            <a href="https://wa.me/628562595708?text=Halo%20Duta%20Elektronik,%20saya%20ingin%20service%20Elektronik%20%26%20Display." target="_blank" class="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-4 rounded-xl text-sm transition shadow-md shadow-blue-600/20">
+              Konsultasi Workshop
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="bg-slate-900/90 backdrop-blur-sm border border-blue-500/50 rounded-3xl p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-bold px-3.5 py-1.5 rounded-bl-2xl uppercase tracking-wider">Favorit</div>
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-950 border border-blue-800/60 flex items-center justify-center text-xl mb-6 shadow-inner">⚡</div>
+            <h4 class="text-xl font-bold text-white mb-2">Perangkat Lainnya</h4>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed">Solusi perbaikan berbagai peralatan elektronik rumah tangga dan penunjang usaha kecil.</p>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li class="flex items-center space-x-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span><span>Service Microwave & Oven Listrik</span></li>
+              <li class="flex items-center space-x-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span><span>Service Dispenser & Water Heater</span></li>
+              <li class="flex items-center space-x-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span><span>Perbaikan Kelistrikan & Kontrol Elektronik</span></li>
+              <li class="flex items-center space-x-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span><span>Konsultasi Kerusakan Perangkat</span></li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-slate-800/80">
+            <a href="https://wa.me/628562595708?text=Halo%20Duta%20Elektronik,%20saya%20ingin%20konsultasi%20perangkat%20lainnya." target="_blank" class="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-4 rounded-xl text-sm transition shadow-md shadow-blue-600/20">
+              Hubungi Teknisi
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. ESTIMASI TARIF ==================== -->
+  <section id="tarif" class="max-w-7xl mx-auto px-4 py-24 bg-glow-radial border-b border-slate-200/60">
+    <div class="text-center mb-16">
+      <span class="text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-100 px-3.5 py-1.5 rounded-full uppercase tracking-wider">Transparansi Harga</span>
+      <h3 class="text-3xl font-extrabold text-slate-900 mt-4 mb-3">Estimasi Tarif Pengecekan, Jasa & Waktu Pengerjaan</h3>
+      <p class="text-slate-600 text-sm md:text-base">Tarif penanganan dan estimasi waktu disesuaikan secara objektif berdasarkan standar pasaran di Yogyakarta.</p>
+    </div>
+
+    <div class="bg-white/90 backdrop-blur-md border border-slate-200/80 rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-slate-200 bg-slate-50/80 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+              <th class="py-4 px-6">Kategori Layanan</th>
+              <th class="py-4 px-6">Biaya Pengecekan</th>
+              <th class="py-4 px-6">Kisaran Biaya Jasa</th>
+              <th class="py-4 px-6">Waktu Pengerjaan</th>
+              <th class="py-4 px-6">Garansi</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-sm text-slate-700">
+            <tr class="hover:bg-slate-50/60 transition">
+              <td class="py-4 px-6 font-semibold text-slate-900">TV LED / Smart TV (Ganti Backlight / Modul)</td>
+              <td class="py-4 px-6 text-slate-700 font-medium">Bersifat Kondisional*</td>
+              <td class="py-4 px-6">Rp 75.000 - Rp 250.000</td>
+              <td class="py-4 px-6 text-slate-700 font-medium">Bersifat Kondisional*</td>
+              <td class="py-4 px-6">30 Hari</td>
+            </tr>
+            <tr class="hover:bg-slate-50/60 transition">
+              <td class="py-4 px-6 font-semibold text-slate-900">Mesin Cuci (1 & 2 Tabung)</td>
+              <td class="py-4 px-6 text-slate-700 font-medium">Bersifat Kondisional*</td>
+              <td class="py-4 px-6">Rp 75.000 - Rp 200.000</td>
+              <td class="py-4 px-6 text-slate-700 font-medium">Bersifat Kondisional*</td>
+              <td class="py-4 px-6">30 Hari</td>
+            </tr>
+            <tr class="hover:bg-slate-50/60 transition">
+              <td class="py-4 px-6 font-semibold text-slate-900">Kulkas / Freezer (1 & 2 Pintu)</td>
+              <td class="py-4 px-6 text-slate-700 font-medium">Bersifat Kondisional*</td>
+              <td class="py-4 px-6">Rp 100.000 - Rp 300.000</td>
+              <td class="py-4 px-6 text-slate-700 font-medium">Bersifat Kondisional*</td>
+              <td class="py-4 px-6">30 Hari</td>
+            </tr>
+            <tr class="hover:bg-slate-50/60 transition">
+              <td class="py-4 px-6 font-semibold text-slate-900">AC Rumah / Split (Cuci & Perbaikan Ringan)</td>
+              <td class="py-4 px-6 text-slate-700 font-medium">Bersifat Kondisional*</td>
+              <td class="py-4 px-6">Rp 60.000 - Rp 250.000</td>
+              <td class="py-4 px-6 text-slate-700 font-medium">Bersifat Kondisional*</td>
+              <td class="py-4 px-6">30 Hari</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="bg-slate-50/80 px-6 py-4 border-t border-slate-200/60 text-xs text-slate-500 italic">
+        *Biaya pengecekan dan waktu pengerjaan bersifat kondisional, menyesuaikan tingkat kerumitan diagnosis, ketersediaan komponen/sparepart, serta jarak lokasi penanganan di area Yogyakarta.
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. DOKUMENTASI PORTOFOLIO & SLIDER ==================== -->
+  <section id="portofolio" class="max-w-7xl mx-auto px-4 py-24">
+    <div class="text-center mb-16">
+      <span class="text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-100 px-3.5 py-1.5 rounded-full uppercase tracking-wider">Galeri Lapangan</span>
+      <h3 class="text-3xl font-extrabold text-slate-900 mt-4 mb-3">Dokumentasi Proyek & Layanan</h3>
+      <p class="text-slate-600 text-sm md:text-base">Hasil pengerjaan nyata di lapangan oleh teknisi ahli Duta Elektronik.</p>
+    </div>
+
+    <!-- Grid Kartu Portofolio -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+      <!-- KARTU 1: OVEN KOMERSIAL LAINOX -->
+      <div class="bg-white/90 backdrop-blur-md rounded-3xl shadow-xl shadow-slate-200/40 overflow-hidden border border-slate-200/80 flex flex-col justify-between transition hover:-translate-y-1 duration-300">
+        <div class="p-6 pb-2">
+          <span class="text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full">Commercial Equipment</span>
+          <h4 class="text-xl font-bold text-slate-900 mt-3 mb-2">Service & Overhaul Panel Kontrol Oven Industri (Lainox)</h4>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Layanan perbaikan dan perawatan komprehensif untuk unit oven komersial/industri (Combi Oven Lainox). Kami menangani trouble pada sistem kontrol elektronik, penataan ulang jalur wiring, penggantian relay otomatisasi, hingga pembenahan terminal kabel.
+          </p>
+        </div>
+        
+        <!-- Slider Container -->
+        <div class="slider-container bg-slate-900 h-64 relative" id="slider-oven">
+          <div class="slide-track h-full">
+            <div class="slide h-full"><img src="oven-1.jpg" alt="Oven Komersial Lainox" class="w-full h-full object-contain"></div>
+            <div class="slide h-full"><img src="oven-2.jpg" alt="Panel Kontrol Oven" class="w-full h-full object-contain"></div>
+            <div class="slide h-full"><img src="oven-3.jpg" alt="Ferrule Terminal Kabel" class="w-full h-full object-contain"></div>
+            <div class="slide h-full"><img src="oven-4.jpg" alt="Relay Array Omron" class="w-full h-full object-contain"></div>
+            <div class="slide h-full"><img src="oven-5.jpg" alt="Detail Relay" class="w-full h-full object-contain"></div>
+          </div>
+          <!-- Tombol Navigasi -->
+          <button onclick="prevSlide('oven')" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2.5 rounded-full hover:bg-black/70 transition z-10">&#10094;</button>
+          <button onclick="nextSlide('oven')" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2.5 rounded-full hover:bg-black/70 transition z-10">&#10095;</button>
+          
+          <!-- Caption Transparan -->
+          <div class="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm text-white text-xs px-4 py-2.5 text-center z-10 italic border-t border-white/10" id="caption-oven">
+            Pengecekan unit oven komersial kapasitas besar (Combi Oven) di dapur restoran/industri.
+          </div>
+        </div>
+      </div>
+
+      <!-- KARTU 2: CHILLER / COLD ROOM -->
+      <div class="bg-white/90 backdrop-blur-md rounded-3xl shadow-xl shadow-slate-200/40 overflow-hidden border border-slate-200/80 flex flex-col justify-between transition hover:-translate-y-1 duration-300">
+        <div class="p-6 pb-2">
+          <span class="text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full">Refrigeration Engineering</span>
+          <h4 class="text-xl font-bold text-slate-900 mt-3 mb-2">Service & Rekayasa Modul Kontrol Chiller / Cold Room</h4>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Metode modifikasi dan penambahan rangkaian kelistrikan eksternal tanpa mengganti modul utama yang rusak. Solusi efisien dan cerdas untuk memulihkan fungsi otomatisasi pendingin dengan estimasi biaya jauh lebih terjangkau.
+          </p>
+        </div>
+
+        <!-- Slider Container -->
+        <div class="slider-container bg-slate-900 h-64 relative" id="slider-chiller">
+          <div class="slide-track h-full">
+            <div class="slide h-full"><img src="chiller-1.jpg" alt="Panel Kontrol Chiller" class="w-full h-full object-contain"></div>
+            <div class="slide h-full"><img src="chiller-2.jpg" alt="Evaporator Check" class="w-full h-full object-contain"></div>
+            <div class="slide h-full"><img src="chiller-3.jpg" alt="Kompresor Chiller" class="w-full h-full object-contain"></div>
+            <div class="slide h-full"><img src="chiller-4.jpg" alt="Panel Interior" class="w-full h-full object-contain"></div>
+            <div class="slide h-full"><img src="chiller-5.jpg" alt="Socket Relay" class="w-full h-full object-contain"></div>
+            <div class="slide h-full"><img src="chiller-6.jpg" alt="Relay Component" class="w-full h-full object-contain"></div>
+          </div>
+          <!-- Tombol Navigasi -->
+          <button onclick="prevSlide('chiller')" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2.5 rounded-full hover:bg-black/70 transition z-10">&#10094;</button>
+          <button onclick="nextSlide('chiller')" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2.5 rounded-full hover:bg-black/70 transition z-10">&#10095;</button>
+          
+          <!-- Caption Transparan -->
+          <div class="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm text-white text-xs px-4 py-2.5 text-center z-10 italic border-t border-white/10" id="caption-chiller">
+            Tampilan luar box panel kontrol digital hasil rekayasa ulang untuk memantau dan mengatur temperatur Cold Room Chiller.
+          </div>
+        </div>
+      </div>
+
+      <!-- KARTU 3: AC KOMERSIAL RESTORAN -->
+      <div class="bg-white/90 backdrop-blur-md rounded-3xl shadow-xl shadow-slate-200/40 overflow-hidden border border-slate-200/80 flex flex-col justify-between transition hover:-translate-y-1 duration-300">
+        <div class="p-6 pb-2">
+          <span class="text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full">HVAC Maintenance</span>
+          <h4 class="text-xl font-bold text-slate-900 mt-3 mb-2">Service, Cuci, & Perawatan Berkala AC Komersial</h4>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Layanan perawatan berkala, pembersihan intensif, dan perbaikan unit pendingin udara komersial untuk area restoran dan tempat usaha agar performa tetap maksimal dan efisien energi.
+          </p>
+        </div>
+
+        <!-- Slider Container -->
+        <div class="slider-container bg-slate-900 h-64 relative" id="slider-ac">
+          <div class="slide-track h-full">
+            <div class="slide h-full"><img src="ac-1.jpg" alt="Service AC Indoor" class="w-full h-full object-contain"></div>
+            <div class="slide h-full"><img src="ac-2.jpg" alt="Cuci Outdoor AC" class="w-full h-full object-contain"></div>
+          </div>
+          <!-- Tombol Navigasi -->
+          <button onclick="prevSlide('ac')" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2.5 rounded-full hover:bg-black/70 transition z-10">&#10094;</button>
+          <button onclick="nextSlide('ac')" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2.5 rounded-full hover:bg-black/70 transition z-10">&#10095;</button>
+          
+          <!-- Caption Transparan -->
+          <div class="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm text-white text-xs px-4 py-2.5 text-center z-10 italic border-t border-white/10" id="caption-ac">
+            Pengecekan dan perawatan unit indoor AC komersial di area restoran/ruang komersial.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 7. FOOTER ==================== -->
+  <footer id="kontak" class="bg-slate-900 text-slate-400 py-16 text-sm border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+      <div>
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="bg-blue-600 text-white font-black px-2.5 py-1 rounded-lg text-sm tracking-wider shadow">DE</div>
+          <span class="text-lg font-bold text-white tracking-wider">DUTA ELEKTRONIK</span>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Pusat perbaikan dan restorasi perangkat elektronik rumah tangga & komersial berstandar tinggi sejak 2010 di Yogyakarta.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-base">Lokasi Workshop</h4>
+        <p class="text-slate-400 text-sm leading-relaxed mb-2">
+          Duta Elektronik<br>
+          Jl. Hayam Wuruk No.63, Tegal Panggung, Kec. Danurejan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55212
+        </p>
+        <span class="text-xs text-blue-400">Tersedia di Google Maps</span>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-base">Hubungi Kami</h4>
+        <ul class="space-y-2 text-sm">
+          <li>💬 WhatsApp Direct: <a href="https://wa.me/628562595708?text=Halo%20Duta%20Elektronik,%20saya%20ingin%20konsultasi%20perbaikan." target="_blank" class="text-blue-400 hover:underline font-semibold">+62 856-2595-708</a></li>
+          <li>⏱️ Senin - Sabtu (08.00 - 17.00 WIB)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
+      <p>&copy; 2026 Duta Elektronik. All Rights Reserved. Spesialis Perbaikan Elektronik & Mesin.</p>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPT SLIDER & CAPTION DINAMIS ==================== -->
+  <script>
+    const sliders = {
+      oven: { index: 0, total: 5, captions: [
+        "Pengecekan unit oven komersial kapasitas besar (Combi Oven) di dapur restoran/industri.",
+        "Pengecekan intensif dan pelacakan jalur kelistrikan pada panel kontrol sistem pemanas oven.",
+        "Pemasangan skun/ferrule ber-label angka pada jalur kabel kontrol untuk keamanan dan kerapian instalasi.",
+        "Inspeksi dan penataan deretan relay kelistrikan 24VDC penggerak elemen pemanas serta fitur otomatisasi oven.",
+        "Pengujian dan penggantian unit relay yang aus untuk memastikan arus beban oven mengalir sempurna."
+      ]},
+      chiller: { index: 0, total: 6, captions: [
+        "Tampilan luar box panel kontrol digital hasil rekayasa ulang untuk memantau dan mengatur temperatur Cold Room Chiller.",
+        "Pemeriksaan dan pengujian kelistrikan unit evaporator internal untuk memastikan distribusi udara dingin berjalan lancar.",
+        "Integrasi jalur kontrol rekayasa baru menuju unit kompresor pendingin.",
+        "Perakitan panel kontrol tambahan dengan sistem otomatisasi terpisah untuk menghemat biaya penggantian modul utama.",
+        "Penambahan soket dan pengkabelan bypass untuk mengambil alih fungsi sakelar otomatis modul bawaan.",
+        "Pemasangan relay logika tambahan sebagai pengganti fungsi kontrol modul lama yang rusak."
+      ]},
+      ac: { index: 0, total: 2, captions: [
+        "Pengecekan dan perawatan unit indoor AC komersial di area restoran/ruang komersial.",
+        "Pembersihan dan perawatan unit outdoor kompresor AC untuk menjaga performa pendinginan tetap maksimal."
+      ]}
+    };
+
+    function updateSlider(name) {
+      const data = sliders[name];
+      const track = document.querySelector(`#slider-${name} .slide-track`);
+      track.style.transform = `translateX(-${data.index * 100}%)`;
+      
+      const captionEl = document.getElementById(`caption-${name}`);
+      if(captionEl) {
+        captionEl.textContent = data.captions[data.index];
+      }
+    }
+
+    function nextSlide(name) {
+      const data = sliders[name];
+      data.index = (data.index + 1) % data.total;
+      updateSlider(name);
+    }
+
+    function prevSlide(name) {
+      const data = sliders[name];
+      data.index = (data.index - 1 + data.total) % data.total;
+      updateSlider(name);
+    }
+
+    // Inisialisasi caption saat halaman pertama dimuat
+    window.addEventListener('DOMContentLoaded', () => {
+      updateSlider('oven');
+      updateSlider('chiller');
+      updateSlider('ac');
+    });
+  </script>
+
+</body>
+</html>
